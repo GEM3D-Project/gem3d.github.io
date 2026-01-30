@@ -241,23 +241,41 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <div class="column is-full"> <h1 class="title is-1 publication-title">Learning Geometrically-Grounded 3D Visual Representations for View-Generalizable Robotic Manipulation</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Di Zhang<sup>1</sup></a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Weicheng Duan<sup>1</sup></a><sup>*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Dasen Gu<sup>1</sup></a>,
                   </span>
+                   <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Hongye Lu<sup>1</sup></a>,
+                  </span>
+                   <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Hai Zhang<sup>2</sup></a>,<br>
+                  </span>
+                  <br>
+                   <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Hang Yu<sup>1</sup></a>,
+                  </span>
+                   <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Junqiao Zhao<sup>1</sup></a><sup>†</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Guang Chen<sup>1</sup></a>
+                  </span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="eql-cntrb"><small><sup>†</sup>Indicates Corresponding Author</small></span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
+                    <span class="author-block"><sup>1</sup>Tongji University, <sup>2</sup>The University of Hong Kong<br>2026</span>
                     <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+
                   </div>
 
                   <div class="column has-text-centered">
@@ -315,17 +333,12 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<section class="hero teaser" style="margin-top: -50px;"> 
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+    <div class="hero-body" style="padding-top: 0;"> <img src="static/images/teaser.png" alt="GEM3D Teaser Image" style="width:100%; height:auto;">
+      
+      <h2 class="subtitle has-text-centered" style="margin-top: 15px;">
+        We present <strong>GEM3D</strong>, a unified representation-policy learning framework for view-generalizable robotic manipulation.
       </h2>
     </div>
   </div>
@@ -341,7 +354,18 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            <p class="abstract-content">
+    Real-world robotic manipulation demands visuomotor policies capable of robust spatial scene understanding and strong generalization across diverse camera viewpoints. 
+    While recent advances in 3D-aware visual representations have shown promise, they still suffer from several key limitations: 
+    (i) reliance on multi-view observations during inference, which is impractical in single-view restricted scenarios; 
+    (ii) incomplete scene modeling that fails to capture holistic and fine-grained geometric structures essential for precise manipulation; and 
+    (iii) lack of effective policy training strategies to retain and exploit the acquired 3D knowledge. 
+    To address these challenges, we present <strong>GEM3D</strong> (Geometrically-Grounded 3D Manipulation), a unified representation-policy learning framework for view-generalizable robotic manipulation. 
+    GEM3D introduces a single-view 3D pretraining paradigm that leverages point cloud reconstruction and feed-forward gaussian splatting under multi-view supervision to learn holistic geometric representations. 
+    During policy learning, GEM3D performs multi-step distillation to preserve the pretrained geometric understanding and effectively transfer it to manipulation skills. 
+    We conduct experiments on 12 RLBench tasks, where our approach outperforms the previous state-of-the-art (SOTA) method by <strong>12.7%</strong> in average success rate. 
+    Further evaluation on six representative tasks demonstrates the strong zero-shot view generalization of our approach, with the success rate drops by only <strong>22.0%</strong> and <strong>29.7%</strong> under moderate and large viewpoint shifts, respectively, whereas the SOTA method suffers larger decreases of <strong>41.6%</strong> and <strong>51.5%</strong>.
+
           </p>
         </div>
       </div>
@@ -350,123 +374,6 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 
@@ -480,19 +387,19 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+<pre id="bibtex-code"><code>@article{zhang2025gem3d,
+  title={Learning Geometrically-Grounded 3D Visual Representations for View-Generalizable Robotic Manipulation},
+  author={Di Zhang, Weicheng Duan, Dasen Gu, Hongye Lu, Hai Zhang, Hang Yu, Junqiao Zhao, Guang Chen},
+  journal={arXiv preprint arXiv:2501.XXXXX},
+  year={2026},
+  url={https://richardduan-shandong.github.io/Academic-project-page-template/}
 }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
 
 
-  <footer class="footer">
+  <!-- <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
@@ -508,7 +415,7 @@
       </div>
     </div>
   </div>
-</footer>
+</footer> -->
 
 <!-- Statcounter tracking code -->
   
